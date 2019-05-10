@@ -4,13 +4,11 @@ from tkinter.messagebox import showinfo
 class MyGui(Frame):
 
     """Docstring for MyGui. """
-
     def __init__(self,parent=None):
         """TODO: to be defined1.
-
         :parent: TODO
-
         """
+
         Frame.__init__(self,parent)
         button = Button(self, text='Press', command=self.reply)
         button.pack()
