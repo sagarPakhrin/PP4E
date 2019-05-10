@@ -11,6 +11,9 @@ class Person:
     def giveRaise(self,percent):
         self.pay *= (1.0 + percent)
 
+    def __str__(self):
+        return '<%s => %s>' %(self.__class__.__name__, self.name)
+
 
 
 if __name__ == "__main__":
