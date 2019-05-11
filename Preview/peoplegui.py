@@ -24,6 +24,7 @@ def makeWidget():
     return window
 
 def fetchRecord():
+    # breakpoint()
     key = entries['key'].get()
     try:
         record = db[key]
@@ -32,11 +33,12 @@ def fetchRecord():
     else:
         for field in fieldnames:
             entries[field].delete(0,END)
-            entries[field].insert(0,repr(geattr(record, field)))
+            entries[field].insert(0,repr(getattr(record, field)))
 
 
 def updateRecord():
     key = entries['key'].get()
 
+db= shelve.open(shelvename)
 window = makeWidget()
 window.mainloop()
