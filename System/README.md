@@ -17,3 +17,10 @@
 `False`
 
 ``
+
+
+conditional assignment
+`a = foo if 'foo' in locals() else 'default'`
+
+conditional printing
+print("Hello windows user" if 'win' in sys.platform else "Hello linux user")
